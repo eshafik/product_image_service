@@ -3,6 +3,22 @@
 python manage.py runserver
 ```
 
+### Install Redis
+```bash
+https://redis.io/docs/getting-started/
+```
+
+### Run Redis Server for Temporarily
+```bash
+redis-cli
+```
+
+### Open new terminal tab and test the redis server is working
+```bash
+redis-cli ping
+output: PONG
+```
+
 ### Create new app or module 
 ```bash
 python manage.py startapp exampleapp 

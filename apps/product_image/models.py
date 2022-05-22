@@ -9,7 +9,7 @@ URL_VALIDATOR = RegexValidator(regex='/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,
                                message=URL_VALIDATOR_MESSAGE)
 
 
-class ProductImages(models.Model):
+class ProductImage(models.Model):
     uid = models.UUIDField(unique=True, default=uuid.uuid4)
     url = models.URLField()
     original_image = models.URLField(validators=[URL_VALIDATOR])
@@ -17,13 +17,13 @@ class ProductImages(models.Model):
     small_image = models.URLField(blank=True, null=True, validators=[URL_VALIDATOR])
     medium_image = models.URLField(blank=True, null=True, validators=[URL_VALIDATOR])
     large_image = models.URLField(blank=True, null=True, validators=[URL_VALIDATOR])
-    created_at = models.DateTimeField(auto_now_add=True)
+    scraped_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'{self.uid}'
 
     class Meta:
-        db_table = 'product_image'
+        db_table = 'product_images'
         indexes = [
             models.Index(fields=['url']),
         ]

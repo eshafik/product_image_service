@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from PIL import Image
 
-from apps.product_image.models import ProductImages
+from apps.product_image.models import ProductImage
 
 
 class ScrapManager(object):
@@ -46,5 +46,5 @@ class ScrapManager(object):
 
     @staticmethod
     def save_on_database(all_data: List[dict]) -> None:
-        ProductImages.objects.bulk_create([ProductImages(**data) for data in all_data])
+        ProductImage.objects.bulk_create([ProductImage(**data) for data in all_data])
         return

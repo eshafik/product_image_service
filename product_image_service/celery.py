@@ -6,7 +6,6 @@ from django.conf import settings
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'product_image_service.settings')
 app = Celery('product_image_service')
 
-# app.config_from_object('django.conf:settings', namespace='CELERY')
 app.config_from_object('django.conf:settings')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 

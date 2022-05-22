@@ -54,6 +54,7 @@ THIRD_PARTY = [
     'rest_framework',
     'django_extensions',
     'corsheaders',
+    'django_filters',
 ]
 SYSTEM_APPS = [
     'apps.scraper',
@@ -149,18 +150,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_PERMISSION_CLASSES': (
-    #     'rest_framework.permissions.IsAuthenticated',
-    #     'apps.user.permissions.UserPermission',
-    # ),
     'DEFAULT_RENDERER_CLASSES': (
         'api.renderers.DefaultRenderer',
     ),
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'rest_framework.authentication.SessionAuthentication',
-    #     'rest_framework.authentication.BasicAuthentication',
-    #     'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-    # ),
     'DEFAULT_MODEL_SERIALIZER_CLASS': (
         'rest_framework.serializers.ModelSerializer',
     ),

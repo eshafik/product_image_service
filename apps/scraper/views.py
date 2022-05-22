@@ -1,7 +1,6 @@
 from django.utils.decorators import method_decorator
 
 from rest_framework.views import APIView
-from rest_framework import status
 from rest_framework.response import Response
 
 from apps.scraper.tasks import scrap_url_for_images
@@ -13,4 +12,4 @@ class ImageFetcherAPI(APIView):
     @method_decorator(image_scraping_query_params_validation)
     def get(self, request):
         scrap_url_for_images.delay(request.query_params['url'])
-        return Response(data={'message': 'Request success'}, status=status.HTTP_202_ACCEPTED)
+        return Response(data={'message': 'Request success'})

@@ -9,3 +9,4 @@ celery==5.2.6
 beautifulsoup4==4.11.1
 requests==2.27.1
 Pillow==9.1.1
+django-filter==21.1

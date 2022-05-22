@@ -1,46 +1,23 @@
+### Pre-requirements to run the project
+```bash
+1. Install postgresql (if not exists in your system)
+2. Install redis (if not exists in your system)
+```
+
+### Steps to run the project
+```bash
+    1. Create Virtualenvironment
+    2. Install requirements.txt dependency
+    3. Create postgresql database for the project
+    4. Run migrate command
+``` 
+
 ### Run the Dev server 
 ```bash
 python manage.py runserver
 ```
 
-### Install Redis
+### Run Celery Beside Dev server (Make sure redis server is running before celery run)
 ```bash
-https://redis.io/docs/getting-started/
-```
-
-### Run Redis Server for Temporarily
-```bash
-redis-cli
-```
-
-### Open new terminal tab and test the redis server is working
-```bash
-redis-cli ping
-output: PONG
-```
-
-### Create new app or module 
-```bash
-python manage.py startapp exampleapp 
-```
-
-### Migrations and Migrate 
-a) Migrations
-For All apps 
-```bash
-python manage.py makemigrations
-```
-For specific app
-```bash
-python manage.py makemigrations app_name
-```
-
-b) Migrate 
-For All apps 
-```bash
-python manage.py migrate
-```
-For specific app
-```bash
-python manage.py migrate app_name
+celery -A product_image_service worker -l info 
 ```

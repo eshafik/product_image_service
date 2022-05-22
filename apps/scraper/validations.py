@@ -6,10 +6,10 @@ from app_libs.error_codes import ERROR_CODE
 
 
 def image_scraping_query_params_validation(func):
-
     def validation(request, *args, **kwargs):
         if not request.query_params.get('url'):
-            raise exceptions.ValidationError({**ERROR_CODE.global_codes.KEY_ERROR, 'hints': 'url query parameter is required'})
+            raise exceptions.ValidationError(
+                {**ERROR_CODE.global_codes.KEY_ERROR, 'hints': 'url query parameter is required'})
         validate_url = URLValidator()
         try:
             validate_url(request.query_params['url'])

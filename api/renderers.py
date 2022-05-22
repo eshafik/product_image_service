@@ -56,6 +56,10 @@ class DefaultRenderer(JSONRenderer):
             else:
                 response_data = None
         else:
+            if 'error_code' in data:
+                response_data['error_code'] = data['error_code']
+            if 'hints' in data:
+                response_data['hints'] = data['hints']
             if 'details' in data:
                 response_data['message'] = data['details']
                 del data['details']

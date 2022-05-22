@@ -9,7 +9,10 @@
 __pycache__/
 local_settings.py
 db.sqlite3
-media
+media/*.png
+media/*.jpeg
+media/*.gif
+media/*.jpg
 .idea/*
 
 app_logs/*.log.*

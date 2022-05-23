@@ -27,5 +27,6 @@ class ProductImage(models.Model):
         indexes = [
             models.Index(fields=['url']),
         ]
+        ordering = ['-scraped_at']
 
 

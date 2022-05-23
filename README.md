@@ -9,7 +9,8 @@
     1. Create Virtualenvironment
     2. Install requirements.txt dependency
     3. Create postgresql database for the project
-    4. Run migrate command
+    4. Create .env file and add the environment variable from env.example
+    5. Run migrate command
 ``` 
 
 ### Run the Dev server 
@@ -29,7 +30,7 @@ http://localhost:8000/api/v1/scrapers/image-fetcher/?url=https://unsplash.com/s/
 
 ### Example of image list and image filter API -
 ```bash
-http://localhost:8000/api/v1/scrapers/image-fetcher/
+http://localhost:8000/api/v1/product-images/images/
 
 Query parameters are:
 id, uid, url, size

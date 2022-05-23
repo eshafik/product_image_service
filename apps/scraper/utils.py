@@ -8,7 +8,7 @@ from apps.product_image.models import ProductImage
 
 
 class ScrapManager(object):
-    def __init__(self, site_url: str):
+    def __init__(self, site_url: str = None):
         self.site_url = site_url
 
     def get_all_image_tags(self) -> List:

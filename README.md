@@ -1,3 +1,9 @@
+### Project Architecture Overview
+Its monolithic architecture with celery for doing asynchronous task. Whenever server gets request for scrapping the product 
+images, It will pass the request to the celery workers. From the celery tasks, firstly it fetches the images urls,
+then it asynchronously requests the image url for downloading the images with multiple threads. So, its 10 times faster 
+than regular synchronous call.
+
 ### Pre-requirements to run the project
 ```bash
 1. Install postgresql (if not exists in your system)

@@ -21,3 +21,16 @@ python manage.py runserver
 ```bash
 celery -A product_image_service worker -l info 
 ```
+
+### Example of image scrapping API-
+```bash
+http://localhost:8000/api/v1/scrapers/image-fetcher/?url=https://unsplash.com/s/photos/web-scraping
+```
+
+### Example of image list and image filter API -
+```bash
+http://localhost:8000/api/v1/scrapers/image-fetcher/
+
+Query parameters are:
+id, uid, url, size
+```

@@ -11,7 +11,7 @@ db.sqlite3
 *.gif
 
 .idea/*
-
+.idea
 app_logs/*.log.*
 
 celerybeat-schedule

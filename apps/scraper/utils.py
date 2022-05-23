@@ -41,6 +41,7 @@ class ScrapManager(object):
                      original_width: int, original_height: int) -> None:
         w_percent = (required_width / float(original_width))
         rsz_height = int((float(original_height) * float(w_percent)))
+        rsz_height = 1 if rsz_height < 1 else rsz_height
         img.thumbnail((required_width, rsz_height), Image.ANTIALIAS)
         img.save(file_path, img_ext)
 

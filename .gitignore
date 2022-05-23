@@ -5,25 +5,10 @@ __pycache__/
 
 db.sqlite3
 
-media/large_images/*.png
-media/medium_images/*.png
-media/small_images/*.png
-media/original_images/*.png
-
-media/large_images/*.jpeg
-media/medium_images/*.jpeg
-media/small_images/*.jpeg
-media/original_images/*.jpeg
-
-media/large_images/*.jpg
-media/medium_images/*.jpg
-media/small_images/*.jpg
-media/original_images/*.jpg
-
-media/large_images/*.gif
-media/medium_images/*.gif
-media/small_images/*.gif
-media/original_images/*.gif
+*.png
+*.jpeg
+*.jpg
+*.gif
 
 .idea/*
 
